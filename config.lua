@@ -1,11 +1,12 @@
 Config = {}
 
-Config.SafeModel = {}
 
 Config.RequiredItems = {
     "thermite",
     "advancedlockpick"
 }
+
+Config.Chance = 25
 
 Config.TruckItems = {
     [1] = {
@@ -28,6 +29,20 @@ Config.TruckItems = {
         info = {},
         type = "item",
         slot = 3,
+    },
+    [4] = {
+        name = "boostinglaptop",
+        amount = 2,
+        info = {},
+        type = "item",
+        slot = 4,
+    },
+    [5] = {
+        name = "boostingdisabler",
+        amount = 1,
+        info = {},
+        type = "item",
+        slot = 5,
     },
 }
 
@@ -54,23 +69,19 @@ Config.Models = {
 }
 Config.MinPolice = 0
 
-Config.Rewards = {
-    chance = 35, 
-    Items = {
-    "laptop_red",
-    "usb_red",
-    "boostinglaptop",
-    "boostingdisabler",
-    }
-}
-
 Config.CoolDown = 1000000/60000
-Config.Cooling = 10000
+Config.Cooling = 1000000
 
 Config.Locations = {
-    Spawn = {
-     {x = 46.21846,  y = -1.123022, z = 69.52243,   h = 255.15000},
-     {x = 788.25756, y = -997.9289, z =  26.070653, h =5.8936314},
-     {x = -420.1586, y = -1168.821, z =  20.797712, h =183.47119},
-    },
-} 
+    vector4(-580.9742, -1119.274, 22.178577, 84.29058),
+    vector4(-682.0448, -878.4678, 24.499057, 180.86965),
+    vector4(-1018.592, -1007.149, 2.1032044, 115.95909),
+    vector4(-1163.437, -2055.085, 14.145155, 324.11349),
+    vector4(-767.6372, -2602.057, 13.84762, 232.90646),
+    vector4(866.77465, -3020.203, 5.8709816, 272.15036),
+    vector4(1638.7873, -2275.123, 106.16671, 4.5649113),
+    vector4(1306.4942, -1749.682, 53.878448, 22.562105),
+    vector4(755.53625, -306.0304, 59.881511, 301.2843),
+    vector4(808.15509, 1272.6915, 360.48495, 264.75378),
+    vector4(118.9, -1069.41, 28.72, 359.57)
+}
