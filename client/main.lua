@@ -4,19 +4,6 @@ local copsCalled = false
 local Player = {}
 local isCooldown = false
 local hasItem = false
-local Locations = {
-    vector4(-580.9742, -1119.274, 22.178577, 84.29058),
-    vector4(-682.0448, -878.4678, 24.499057, 180.86965),
-    vector4(-1018.592, -1007.149, 2.1032044, 115.95909),
-    vector4(-1163.437, -2055.085, 14.145155, 324.11349),
-    vector4(-767.6372, -2602.057, 13.84762, 232.90646),
-    vector4(866.77465, -3020.203, 5.8709816, 272.15036),
-    vector4(1638.7873, -2275.123, 106.16671, 4.5649113),
-    vector4(1306.4942, -1749.682, 53.878448, 22.562105),
-    vector4(755.53625, -306.0304, 59.881511, 301.2843),
-    vector4(808.15509, 1272.6915, 360.48495, 264.75378),
-    vector4(118.9, -1069.41, 28.72, 359.57)
-}
 
 CreateThread(function()
     Wait(1000)
@@ -24,6 +11,14 @@ CreateThread(function()
         PlayerJob = QBCore.Functions.GetPlayerData().job
     end
 end)
+
+function chanceGet(chance)
+    local roll = math.random(1, 100)
+    if roll <= chance then 
+        return true
+    end
+    return false
+end
 
 
 CreateThread(function()
@@ -69,7 +64,7 @@ AddEventHandler('cosmos-lester:client:ThermiteHack', function()
                 local blips = {
                     {title = "??", colour = 2, id = 1, random}
                 }
-                local coords = Locations[math.random(#Locations)]
+                local coords = Config.Locations[math.random(#Config.Locations)]
                 local hash = GetHashKey("Stockade3")
                 local vehicle = QBCore.Functions.SpawnVehicle('Stockade3', function(veh)
                     SetEntityHeading(veh, coords.w)
@@ -93,8 +88,3 @@ AddEventHandler('cosmos-lester:client:ThermiteHack', function()
         end
     end, "trojan_usb")
 end)
-
-
--- else if hasItem == false then
---QBCore.Functions.Notify("You are missing something", "error")
---end
