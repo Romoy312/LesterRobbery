@@ -23,6 +23,8 @@ Config.Models is the one that deals with what objects are targetable and trigger
 
 Config.Distance is how far away the person can be from the laptop to start the hack
 
+Config.Fuel is for the fuel for the vehicle, change to whatever fuel system you use
+
 Everything else is not in use at the moment
 
 Just a simple Script
