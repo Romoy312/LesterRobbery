@@ -9,4 +9,4 @@ Dependencies: [PolyZone](https://github.com/mkafrin/PolyZone),
               
 Preview coming soon...
 
-STILL IN DEVELOPMENT!!!!
+Just a simple Script
