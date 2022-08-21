@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 
 author 'Romoy'
-description 'Cosmos RP Store Robbery'
+description 'Cosmos RP Lester Warehouse Robbery'
 version '1.0.0'
 
 shared_script 'config.lua'
