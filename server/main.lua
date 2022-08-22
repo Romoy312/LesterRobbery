@@ -1,19 +1,15 @@
 local QBCore = exports['qb-core']:GetCoreObject();
+local onCoolDown = false
+local status = false
+local inProgress = false
+local onCoolDown = isCooldown
 
-local hackSettings = {
-    ['lester'] = {
-        time = 9,
-        blocks = 4,
-        amount = 6
-    }
-}
-
-local thermiteSettings = {
-    ['lester'] = {
-        correctBlocks = 8,
-        incorrectBlocks = 2,
-        timetoshow = 3.5,
-        timetoLose = 7
-    }
-}
-
+RegisterNetEvent('cosmos-lester:sever:PlayerCooldown')
+AddEventHandler('cosmos-lester:sever:PlayerCooldown', function()
+    if onCoolDown == true then
+        QBCore.Functions.Notify("Someone Already Hit the system", "error")
+    end
+    if onCoolDown == false then
+        return false
+    end
+end)
