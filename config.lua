@@ -46,7 +46,7 @@ Config.TruckItems = { --Items that will be in the trunk of the vehicle spawned
     },
 }
 
-Config.Spot = { --Not in use eithers
+Config.Spot = { --Not in use either
     ['LesterStorage'] = {
         label = 'Lesters Warehouse',
         type = 'warehouse',
@@ -65,13 +65,14 @@ Config.Spot = { --Not in use eithers
 Config.Distance = 1.5 --Max Distance player can be from laptop to do the hack
 
 Config.Models = {
-    laptopmodel = 1385417869 --Model of the object used 
+    laptopmodel = 1385417869,  --Model of the object used 
+    backdoormodel = 1518466392,
 }
 Config.MinPolice = 0 --Not in use at the moment, future update
 
 Config.CoolDown = 1000000/60000 --Time displayed in notify message, don't touch the number after the '/'
 Config.Cooling = 1000000 --Amount of time hack is on cooldown
-Config.Fuel = 'lj-fuel' --Change to whatever fuel system you use
+Config.Fuel = 'lj-fuel' --Change to whatever fuel systenm you use
 
 Config.Locations = { --Locations that vehicle can spawn
     vector4(-580.9742, -1119.274, 22.178577, 84.29058),
